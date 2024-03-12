@@ -45,5 +45,5 @@ vf_paris2022 = vf2022[vf2022['Code postal'].isin(paris_postal_codes)]
 # Afficher les cinq premières lignes des données de Paris
 print(vf_paris2022.head())
 
-# Enregistrer les données organisées dans un fichier CSV avec alignement
+# Enregistrer les données organisées dans un fichier CSV
 vf_paris2022.to_csv("valeursfoncieres_paris_2022.csv", index=False, float_format='%.1f', sep=',', line_terminator='\n')
