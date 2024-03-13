@@ -1,7 +1,7 @@
 import os
 import json
 
-def format_data(input_file, output_file, keys_mapping, output_directory="formatted_json"):
+def format_data(input_file, output_file, keys_mapping, output_directory="fetching_api_data/formatted_json"):
     # Charger les données depuis le fichier d'entrée au format JSON
     with open(input_file, 'r', encoding='utf-8') as file:
         data = json.load(file)
@@ -23,7 +23,7 @@ def format_data(input_file, output_file, keys_mapping, output_directory="formatt
         json.dump(formatted_data, outfile, indent=2)
 
 # Formatage des données pour les espaces libres à végétaliser
-format_data('raw_api_data/plu-espaces-libres-a-vegetaliser-elv.json', 
+format_data('fetching_api_data/raw_api_data/plu-espaces-libres-a-vegetaliser-elv.json', 
             'plu-espaces-libres-a-vegetaliser-elv-formatted.json',
             {'n_sq_elv': 'Identifiant',
              'st_area_shape': 'Superficie',
@@ -33,7 +33,7 @@ format_data('raw_api_data/plu-espaces-libres-a-vegetaliser-elv.json',
              'geo_point_2d': 'Coordonnées géographiques'})
 
 # Formatage des données pour les secteurs de risques
-format_data('raw_api_data/plu-secteurs-de-risques-delimites-par-le-ppri.json', 
+format_data('fetching_api_data/raw_api_data/plu-secteurs-de-risques-delimites-par-le-ppri.json', 
             'plu-secteurs-de-risques-delimites-par-le-ppri-formatted.json',
             {'zonage': 'zonage',
              'n_sq_pprizone': 'n_sq_pprizone',
@@ -43,7 +43,7 @@ format_data('raw_api_data/plu-secteurs-de-risques-delimites-par-le-ppri.json',
              'geo_point_2d': 'geo_point_2d'})
 
 # Formatage des données pour l'encadrement des loyers
-format_data('raw_api_data/logement-encadrement-des-loyers.json', 
+format_data('fetching_api_data/raw_api_data/logement-encadrement-des-loyers.json', 
             'logement-encadrement-des-loyers-formatted.json',
             {'annee': 'annee',
              'id_zone': 'id_zone',
@@ -61,7 +61,7 @@ format_data('raw_api_data/logement-encadrement-des-loyers.json',
              'geo_point_2d': 'geo_point_2d'})
 
 # Formatage des données pour les espaces verts protégés
-format_data('raw_api_data/plu-espaces-verts-proteges-evp.json', 
+format_data('fetching_api_data/raw_api_data/plu-espaces-verts-proteges-evp.json', 
             'plu-espaces-verts-proteges-evp-formatted.json',
             {'n_sq_ca': 'n_sq_ca',
              'numevp': 'numevp',
@@ -72,7 +72,7 @@ format_data('raw_api_data/plu-espaces-verts-proteges-evp.json',
              'geo_point_2d': 'geo_point_2d'})
 
 # Formatage des données pour le DPE France
-format_data('raw_api_data/dpe-france.json', 
+format_data('fetching_api_data/raw_api_data/dpe-france.json', 
             'dpe-france-formatted.json',
             {'key': 'key',
              'type': 'type',
@@ -86,7 +86,7 @@ format_data('raw_api_data/dpe-france.json',
              'x-concept': 'x-concept'})
 
 # Formatage des données pour les arrondissements
-format_data('raw_api_data/arrondissements.json', 
+format_data('fetching_api_data/raw_api_data/arrondissements.json', 
             'arrondissements-formatted.json',
             {'n_sq_ar': 'n_sq_ar',
              'c_ar': 'c_ar',
