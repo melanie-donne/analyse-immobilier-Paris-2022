@@ -1,0 +1,222 @@
+[
+  {
+    "Identifiant": 4604,
+    "Superficie": 52.77880947163109,
+    "P\u00e9rim\u00e8tre": 33.05862591876806,
+    "Section": null,
+    "Aspect": null,
+    "Coordonn\u00e9es g\u00e9ographiques": {
+      "lon": 2.323241978305356,
+      "lat": 48.83377330996698
+    }
+  },
+  {
+    "Identifiant": 4763,
+    "Superficie": 57.78993554492587,
+    "P\u00e9rim\u00e8tre": 36.58111869439424,
+    "Section": "CK",
+    "Aspect": "14-CK-0070",
+    "Coordonn\u00e9es g\u00e9ographiques": {
+      "lon": 2.3277417446113904,
+      "lat": 48.830293936804935
+    }
+  },
+  {
+    "Identifiant": 6744,
+    "Superficie": 15.634894154226744,
+    "P\u00e9rim\u00e8tre": 25.632209743851273,
+    "Section": "FC",
+    "Aspect": "16-FC-0027",
+    "Coordonn\u00e9es g\u00e9ographiques": {
+      "lon": 2.2887715036693894,
+      "lat": 48.87180080469537
+    }
+  },
+  {
+    "Identifiant": 9015,
+    "Superficie": 28.28419470612982,
+    "P\u00e9rim\u00e8tre": 21.86946350597508,
+    "Section": "BI",
+    "Aspect": "20-BI-0095",
+    "Coordonn\u00e9es g\u00e9ographiques": {
+      "lon": 2.406865414308736,
+      "lat": 48.865659613748555
+    }
+  },
+  {
+    "Identifiant": 9059,
+    "Superficie": 11.224019820604147,
+    "P\u00e9rim\u00e8tre": 13.962315369580738,
+    "Section": "AP",
+    "Aspect": "20-AP-0111",
+    "Coordonn\u00e9es g\u00e9ographiques": {
+      "lon": 2.392344875440615,
+      "lat": 48.87068317973698
+    }
+  },
+  {
+    "Identifiant": 8220,
+    "Superficie": 21.828419125930424,
+    "P\u00e9rim\u00e8tre": 23.94953572742419,
+    "Section": "EV",
+    "Aspect": "19-EV-0121",
+    "Coordonn\u00e9es g\u00e9ographiques": {
+      "lon": 2.3770192880478658,
+      "lat": 48.87756728586634
+    }
+  },
+  {
+    "Identifiant": 9117,
+    "Superficie": 23.208313806091716,
+    "P\u00e9rim\u00e8tre": 21.850625597413675,
+    "Section": "BI",
+    "Aspect": "20-BI-0052",
+    "Coordonn\u00e9es g\u00e9ographiques": {
+      "lon": 2.407534649054692,
+      "lat": 48.86655103336411
+    }
+  },
+  {
+    "Identifiant": 7474,
+    "Superficie": 20.90790554656554,
+    "P\u00e9rim\u00e8tre": 21.05982351976361,
+    "Section": "DJ",
+    "Aspect": "16-DJ-0072",
+    "Coordonn\u00e9es g\u00e9ographiques": {
+      "lon": 2.279857003714874,
+      "lat": 48.86274749872649
+    }
+  },
+  {
+    "Identifiant": 7502,
+    "Superficie": 68.3821091745828,
+    "P\u00e9rim\u00e8tre": 52.577548186543424,
+    "Section": "AI",
+    "Aspect": "16-AI-0026",
+    "Coordonn\u00e9es g\u00e9ographiques": {
+      "lon": 2.2654376826437916,
+      "lat": 48.84320884252375
+    }
+  },
+  {
+    "Identifiant": 8309,
+    "Superficie": 130.33411139850298,
+    "P\u00e9rim\u00e8tre": 81.82791695505469,
+    "Section": "DK",
+    "Aspect": "19-DK-0057",
+    "Coordonn\u00e9es g\u00e9ographiques": {
+      "lon": 2.395272285799545,
+      "lat": 48.880903793556364
+    }
+  },
+  {
+    "Identifiant": 6098,
+    "Superficie": 58.920021919816904,
+    "P\u00e9rim\u00e8tre": 33.2716138272395,
+    "Section": "DW",
+    "Aspect": "13-DW-0078",
+    "Coordonn\u00e9es g\u00e9ographiques": {
+      "lon": 2.3548499402287133,
+      "lat": 48.82485533113043
+    }
+  },
+  {
+    "Identifiant": 6242,
+    "Superficie": 59.40700232039457,
+    "P\u00e9rim\u00e8tre": 32.56380467566741,
+    "Section": "DW",
+    "Aspect": "13-DW-0098",
+    "Coordonn\u00e9es g\u00e9ographiques": {
+      "lon": 2.3546047299340134,
+      "lat": 48.82467192164223
+    }
+  },
+  {
+    "Identifiant": 6266,
+    "Superficie": 29.981330001188788,
+    "P\u00e9rim\u00e8tre": 41.424319715785316,
+    "Section": "DW",
+    "Aspect": "13-DW-0206",
+    "Coordonn\u00e9es g\u00e9ographiques": {
+      "lon": 2.3533215540768935,
+      "lat": 48.825476274427054
+    }
+  },
+  {
+    "Identifiant": 5947,
+    "Superficie": 39.75347558986717,
+    "P\u00e9rim\u00e8tre": 27.741042676182122,
+    "Section": "EE",
+    "Aspect": "13-EE-0100",
+    "Coordonn\u00e9es g\u00e9ographiques": {
+      "lon": 2.3458499496766354,
+      "lat": 48.82697672915049
+    }
+  },
+  {
+    "Identifiant": 8345,
+    "Superficie": 85.89373223380392,
+    "P\u00e9rim\u00e8tre": 40.80241272982219,
+    "Section": "DK",
+    "Aspect": "19-DK-0067",
+    "Coordonn\u00e9es g\u00e9ographiques": {
+      "lon": 2.396494537774205,
+      "lat": 48.88095144033626
+    }
+  },
+  {
+    "Identifiant": 9262,
+    "Superficie": 126.74046541830961,
+    "P\u00e9rim\u00e8tre": 84.86961547986893,
+    "Section": "DK",
+    "Aspect": "19-DK-0637",
+    "Coordonn\u00e9es g\u00e9ographiques": {
+      "lon": 2.395834417437386,
+      "lat": 48.88057365759551
+    }
+  },
+  {
+    "Identifiant": 6837,
+    "Superficie": 162.97182660822202,
+    "P\u00e9rim\u00e8tre": 67.36328905099452,
+    "Section": "DM",
+    "Aspect": "16-DM-0042",
+    "Coordonn\u00e9es g\u00e9ographiques": {
+      "lon": 2.275699899421191,
+      "lat": 48.859856408142285
+    }
+  },
+  {
+    "Identifiant": 8438,
+    "Superficie": 15.447291765082468,
+    "P\u00e9rim\u00e8tre": 15.723424048913326,
+    "Section": "DK",
+    "Aspect": "19-DK-0494",
+    "Coordonn\u00e9es g\u00e9ographiques": {
+      "lon": 2.3946931185132208,
+      "lat": 48.879869163591756
+    }
+  },
+  {
+    "Identifiant": 6295,
+    "Superficie": 28.310592035105326,
+    "P\u00e9rim\u00e8tre": 29.507506436122725,
+    "Section": "BK",
+    "Aspect": "14-BK-0169",
+    "Coordonn\u00e9es g\u00e9ographiques": {
+      "lon": 2.3352116906930815,
+      "lat": 48.823511588064825
+    }
+  },
+  {
+    "Identifiant": 6399,
+    "Superficie": 26.09728798892945,
+    "P\u00e9rim\u00e8tre": 23.148043842780513,
+    "Section": "BK",
+    "Aspect": "14-BK-0043",
+    "Coordonn\u00e9es g\u00e9ographiques": {
+      "lon": 2.3347042077594438,
+      "lat": 48.823216631103804
+    }
+  }
+]

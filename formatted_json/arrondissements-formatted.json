@@ -1,0 +1,262 @@
+[
+  {
+    "n_sq_ar": 750000005,
+    "c_ar": 5,
+    "c_arinsee": 75105,
+    "l_ar": "5\u00e8me Ardt",
+    "l_aroff": "Panth\u00e9on",
+    "surface": 2539374.62284532,
+    "perimetre": 6239.19539614,
+    "geom_x_y": {
+      "lon": 2.3507146095752587,
+      "lat": 48.844443150532705
+    }
+  },
+  {
+    "n_sq_ar": 750000010,
+    "c_ar": 10,
+    "c_arinsee": 75110,
+    "l_ar": "10\u00e8me Ardt",
+    "l_aroff": "Entrep\u00f4t",
+    "surface": 2891739.44162064,
+    "perimetre": 6739.37505466,
+    "geom_x_y": {
+      "lon": 2.360728487847452,
+      "lat": 48.87613003653913
+    }
+  },
+  {
+    "n_sq_ar": 750000018,
+    "c_ar": 18,
+    "c_arinsee": 75118,
+    "l_ar": "18\u00e8me Ardt",
+    "l_aroff": "Buttes-Montmartre",
+    "surface": 5996051.30811905,
+    "perimetre": 9916.46417634,
+    "geom_x_y": {
+      "lon": 2.3481605195620396,
+      "lat": 48.89256926800578
+    }
+  },
+  {
+    "n_sq_ar": 750000007,
+    "c_ar": 7,
+    "c_arinsee": 75107,
+    "l_ar": "7\u00e8me Ardt",
+    "l_aroff": "Palais-Bourbon",
+    "surface": 4090057.18546976,
+    "perimetre": 8099.42488348,
+    "geom_x_y": {
+      "lon": 2.3121876914820074,
+      "lat": 48.8561744287793
+    }
+  },
+  {
+    "n_sq_ar": 750000006,
+    "c_ar": 6,
+    "c_arinsee": 75106,
+    "l_ar": "6\u00e8me Ardt",
+    "l_aroff": "Luxembourg",
+    "surface": 2153095.58639283,
+    "perimetre": 6483.68678565,
+    "geom_x_y": {
+      "lon": 2.3328979990533147,
+      "lat": 48.84913035858523
+    }
+  },
+  {
+    "n_sq_ar": 750000009,
+    "c_ar": 9,
+    "c_arinsee": 75109,
+    "l_ar": "9\u00e8me Ardt",
+    "l_aroff": "Op\u00e9ra",
+    "surface": 2178303.27487137,
+    "perimetre": 6471.5882901,
+    "geom_x_y": {
+      "lon": 2.3374575434825444,
+      "lat": 48.87716351732887
+    }
+  },
+  {
+    "n_sq_ar": 750000016,
+    "c_ar": 16,
+    "c_arinsee": 75116,
+    "l_ar": "16\u00e8me Ardt",
+    "l_aroff": "Passy",
+    "surface": 16372542.1289739,
+    "perimetre": 17416.1096565,
+    "geom_x_y": {
+      "lon": 2.261970788364543,
+      "lat": 48.860392105415826
+    }
+  },
+  {
+    "n_sq_ar": 750000011,
+    "c_ar": 11,
+    "c_arinsee": 75111,
+    "l_ar": "11\u00e8me Ardt",
+    "l_aroff": "Popincourt",
+    "surface": 3665441.55248808,
+    "perimetre": 8282.01188584,
+    "geom_x_y": {
+      "lon": 2.380058308197898,
+      "lat": 48.859059221342484
+    }
+  },
+  {
+    "n_sq_ar": 750000017,
+    "c_ar": 17,
+    "c_arinsee": 75117,
+    "l_ar": "17\u00e8me Ardt",
+    "l_aroff": "Batignolles-Monceau",
+    "surface": 5668834.50445393,
+    "perimetre": 10775.579516,
+    "geom_x_y": {
+      "lon": 2.3067769905744084,
+      "lat": 48.887326522025816
+    }
+  },
+  {
+    "n_sq_ar": 750000013,
+    "c_ar": 13,
+    "c_arinsee": 75113,
+    "l_ar": "13\u00e8me Ardt",
+    "l_aroff": "Gobelins",
+    "surface": 7149311.09107136,
+    "perimetre": 11546.5465264,
+    "geom_x_y": {
+      "lon": 2.3622724404209055,
+      "lat": 48.828388031744666
+    }
+  },
+  {
+    "n_sq_ar": 750000015,
+    "c_ar": 15,
+    "c_arinsee": 75115,
+    "l_ar": "15\u00e8me Ardt",
+    "l_aroff": "Vaugirard",
+    "surface": 8494994.08101075,
+    "perimetre": 13678.7983149,
+    "geom_x_y": {
+      "lon": 2.2928258224249976,
+      "lat": 48.840085375938216
+    }
+  },
+  {
+    "n_sq_ar": 750000020,
+    "c_ar": 20,
+    "c_arinsee": 75120,
+    "l_ar": "20\u00e8me Ardt",
+    "l_aroff": "M\u00e9nilmontant",
+    "surface": 5983446.03718297,
+    "perimetre": 10704.9404863,
+    "geom_x_y": {
+      "lon": 2.4011881292846864,
+      "lat": 48.86346057889562
+    }
+  },
+  {
+    "n_sq_ar": 750000001,
+    "c_ar": 1,
+    "c_arinsee": 75101,
+    "l_ar": "1er Ardt",
+    "l_aroff": "Louvre",
+    "surface": 1824612.86048666,
+    "perimetre": 6054.93686218,
+    "geom_x_y": {
+      "lon": 2.3364433620533878,
+      "lat": 48.862562701836005
+    }
+  },
+  {
+    "n_sq_ar": 750000003,
+    "c_ar": 3,
+    "c_arinsee": 75103,
+    "l_ar": "3\u00e8me Ardt",
+    "l_aroff": "Temple",
+    "surface": 1170882.82818778,
+    "perimetre": 4519.26364836,
+    "geom_x_y": {
+      "lon": 2.360000985897692,
+      "lat": 48.862872380016924
+    }
+  },
+  {
+    "n_sq_ar": 750000014,
+    "c_ar": 14,
+    "c_arinsee": 75114,
+    "l_ar": "14\u00e8me Ardt",
+    "l_aroff": "Observatoire",
+    "surface": 5614877.30907921,
+    "perimetre": 10317.4833099,
+    "geom_x_y": {
+      "lon": 2.3265420441989466,
+      "lat": 48.82924450048987
+    }
+  },
+  {
+    "n_sq_ar": 750000019,
+    "c_ar": 19,
+    "c_arinsee": 75119,
+    "l_ar": "19\u00e8me Ardt",
+    "l_aroff": "Buttes-Chaumont",
+    "surface": 6792651.12902648,
+    "perimetre": 11253.1824786,
+    "geom_x_y": {
+      "lon": 2.384820960152517,
+      "lat": 48.887075996572584
+    }
+  },
+  {
+    "n_sq_ar": 750000002,
+    "c_ar": 2,
+    "c_arinsee": 75102,
+    "l_ar": "2\u00e8me Ardt",
+    "l_aroff": "Bourse",
+    "surface": 991153.74474596,
+    "perimetre": 4554.10435957,
+    "geom_x_y": {
+      "lon": 2.3428025468913636,
+      "lat": 48.86827922252251
+    }
+  },
+  {
+    "n_sq_ar": 750000004,
+    "c_ar": 4,
+    "c_arinsee": 75104,
+    "l_ar": "4\u00e8me Ardt",
+    "l_aroff": "H\u00f4tel-de-Ville",
+    "surface": 1600585.63150251,
+    "perimetre": 5420.90843368,
+    "geom_x_y": {
+      "lon": 2.357629620324997,
+      "lat": 48.85434142627288
+    }
+  },
+  {
+    "n_sq_ar": 750000008,
+    "c_ar": 8,
+    "c_arinsee": 75108,
+    "l_ar": "8\u00e8me Ardt",
+    "l_aroff": "\u00c9lys\u00e9e",
+    "surface": 3880036.39704363,
+    "perimetre": 7880.53326819,
+    "geom_x_y": {
+      "lon": 2.312554022402065,
+      "lat": 48.872720837434464
+    }
+  },
+  {
+    "n_sq_ar": 750000012,
+    "c_ar": 12,
+    "c_arinsee": 75112,
+    "l_ar": "12\u00e8me Ardt",
+    "l_aroff": "Reuilly",
+    "surface": 16314782.6372674,
+    "perimetre": 24089.6662978,
+    "geom_x_y": {
+      "lon": 2.4213249007846787,
+      "lat": 48.834974381480386
+    }
+  }
+]
