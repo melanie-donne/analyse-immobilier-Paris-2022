@@ -21,14 +21,12 @@ def fetch_and_save_data(api_url, output_file):
 
 # Liste des API à interroger avec les URLs correspondantes et les noms des fichiers de sortie
 api_urls = [
-    ("https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/plu-espaces-libres-a-vegetaliser-elv/records?limit=20", "fetching_api_data/raw_api_data/plu-espaces-libres-a-vegetaliser-elv.json"),
-    ("https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/plu-secteurs-de-risques-delimites-par-le-ppri/records?limit=20&refine=zonage%3A%22V%22&refine=zonage%3A%22B%22", "fetching_api_data/raw_api_data/plu-secteurs-de-risques-delimites-par-le-ppri.json"),
-    ("https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/arrondissements/records?limit=20", "fetching_api_data/raw_api_data/arrondissements.json"),
-    ("https://data.ademe.fr/data-fair/api/v1/datasets/dpe-france/", "fetching_api_data/raw_api_data/dpe-france.json"),
-    ("https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/logement-encadrement-des-loyers/records?limit=20&refine=annee%3A%222022%22","fetching_api_data/raw_api_data/logement-encadrement-des-loyers.json"),
-    ("https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/plu-espaces-verts-proteges-evp/records?limit=20","fetching_api_data/raw_api_data/plu-espaces-verts-proteges-evp.json")# erreur 500 hack,
- # erreur 500 hack   ("https://georisques.gouv.fr/api/v1/cavites","raw_api_data/risque-cavites.json"),
- # erreur 500 hack   ("https://georisques.gouv.fr/api/v1/gaspar/azi?rayon=1000","raw_api_data/operations-atlas-zones-inondables.json")
+    ("https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/plu-espaces-libres-a-vegetaliser-elv/records", "fetching_api_data/raw_api_data/plu-espaces-libres-a-vegetaliser-elv.json"),
+    ("https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/plu-secteurs-de-risques-delimites-par-le-ppri/records", "fetching_api_data/raw_api_data/plu-secteurs-de-risques-delimites-par-le-ppri.json"),
+    ("https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/arrondissements/records", "fetching_api_data/raw_api_data/arrondissements.json"),
+    ("https://parisdata.opendatasoft.com/api/explore/v2.1/catalog/datasets/quartier_paris/records", "fetching_api_data/raw_api_data/quartiers-administratifs.json"),
+    ("https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/logement-encadrement-des-loyers/records","fetching_api_data/raw_api_data/logement-encadrement-des-loyers.json"),
+    ("https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/espaces_verts/records","fetching_api_data/raw_api_data/espaces-verts-et-assimiles.json")
 ]
 
 # Parcourir la liste des API et exécuter la fonction fetch_and_save_data pour chaque API

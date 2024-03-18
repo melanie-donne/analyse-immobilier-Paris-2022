@@ -60,31 +60,6 @@ format_data('fetching_api_data/raw_api_data/logement-encadrement-des-loyers.json
              'geo_shape': 'geo_shape',
              'geo_point_2d': 'geo_point_2d'})
 
-# Formatage des données pour les espaces verts protégés
-format_data('fetching_api_data/raw_api_data/plu-espaces-verts-proteges-evp.json', 
-            'plu-espaces-verts-proteges-evp-formatted.json',
-            {'n_sq_ca': 'n_sq_ca',
-             'numevp': 'numevp',
-             'texte': 'texte',
-             'st_area_shape': 'st_area_shape',
-             'st_perimeter_shape': 'st_perimeter_shape',
-             'geo_shape': 'geo_shape',
-             'geo_point_2d': 'geo_point_2d'})
-
-# Formatage des données pour le DPE France
-format_data('fetching_api_data/raw_api_data/dpe-france.json', 
-            'dpe-france-formatted.json',
-            {'key': 'key',
-             'type': 'type',
-             'title': 'title',
-             'description': 'description',
-             'x-cardinality': 'x-cardinality',
-             'x-capabilities': 'x-capabilities',
-             'enum': 'enum',
-             'format': 'format',
-             'x-refersTo': 'x-refersTo',
-             'x-concept': 'x-concept'})
-
 # Formatage des données pour les arrondissements
 format_data('fetching_api_data/raw_api_data/arrondissements.json', 
             'arrondissements-formatted.json',
@@ -97,3 +72,50 @@ format_data('fetching_api_data/raw_api_data/arrondissements.json',
              'perimetre': 'perimetre',
              'geom_x_y': 'geom_x_y',
              'coordinates': 'coordinates'})
+
+# Formatage des données pour les quartiers administratifs
+format_data('fetching_api_data/raw_api_data/quartiers-administratifs.json', 
+            'quartiers-administratifs-formatted.json',
+            {'n_sq_qu': 'n_sq_qu',
+             'c_qu': 'c_qu',
+             'c_quinsee': 'c_quinsee',
+             'l_qu': 'l_qu',
+             'c_ar': 'c_ar',
+             'n_sq_ar': 'n_sq_ar',
+             'perimetre': 'perimetre',
+             'surface': 'surface',
+             'geom_x_y': 'geom_x_y',
+             'geom': 'geom',
+             'st_area_shape': 'st_area_shape',
+             'st_perimeter_shape': 'st_perimeter_shape'})
+
+# Formatage des données pour les espaces verts et assimilés
+format_data('fetching_api_data/raw_api_data/espaces-verts-et-assimiles.json', 
+            'espaces-verts-et-assimiles.json',
+            {'nsq_espace_vert': 'Identifiant',
+             'nom_ev': 'Nom',
+             'type_ev': 'Type',
+             'categorie': 'Catégorie',
+             'adresse_numero': 'Numéro',
+             'adresse_complement': 'Complément',
+             'adresse_typevoie': 'Type de voie',
+             'adresse_libellevoie': 'Libellé de voie',
+             'adresse_codepostal': 'Code postal',
+             'poly_area': 'Superficie',
+             'surface_totale_reelle': 'Surface totale réelle',
+             'surface_horticole': 'Surface horticole',
+             'presence_cloture': 'Présence de clôture',
+             'perimeter': 'Périmètre',
+             'annee_ouverture': 'Année d\'ouverture',
+             'annee_renovation': 'Année de rénovation',
+             'ancien_nom_ev': 'Ancien nom',
+             'annee_changement_nom': 'Année de changement de nom',
+             'nb_entites': 'Nombre d\'entités',
+             'ouvert_ferme': 'Ouvert/Fermé',
+             'id_division': 'ID de division',
+             'id_atelier_horticole': 'ID d\'atelier horticole',
+             'ida3d_enb': 'ID 3D ENB',
+             'site_villes': 'Site Villes',
+             'id_eqpt': 'ID Équipement',
+             'competence': 'Compétence',
+             'geom': 'Géométrie'})
