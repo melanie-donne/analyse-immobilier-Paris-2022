@@ -1,8 +1,8 @@
-import sqlite3
+import snowflake.connector
 import json
 import csv
 
-# Fonction pour insérer des données JSON dans une table
+# Fonction pour insérer des données JSON dans une table Snowflake
 def inserer_donnees_json(cur, json_file, table_name):
     try:
         # Lecture du fichier JSON
@@ -11,13 +11,13 @@ def inserer_donnees_json(cur, json_file, table_name):
             # Insertion des données dans la table spécifiée
             cur.executemany(f"""
                 INSERT INTO {table_name} ({', '.join(data[0].keys())})
-                VALUES ({', '.join(['?' for _ in data[0].keys()])})
+                VALUES ({', '.join(['%s' for _ in data[0].keys()])})
             """, [tuple(item.values()) for item in data])
-    except (sqlite3.Error, FileNotFoundError, json.JSONDecodeError) as e:
+    except (snowflake.connector.errors.ProgrammingError, FileNotFoundError, json.JSONDecodeError) as e:
         # Gestion des erreurs
         print(f"Erreur lors de l'insertion des données JSON : {e}")
 
-# Fonction pour insérer des données CSV dans une table
+# Fonction pour insérer des données CSV dans une table Snowflake
 def inserer_donnees_csv(cur, csv_file, table_name):
     try:
         # Lecture du fichier CSV
@@ -26,16 +26,23 @@ def inserer_donnees_csv(cur, csv_file, table_name):
             # Insertion des données dans la table spécifiée
             cur.executemany(f"""
                 INSERT INTO {table_name} ({', '.join(reader.fieldnames)})
-                VALUES ({', '.join(['?' for _ in reader.fieldnames])})
+                VALUES ({', '.join(['%s' for _ in reader.fieldnames])})
             """, [tuple(row.values()) for row in reader])
-    except (sqlite3.Error, FileNotFoundError, csv.Error) as e:
+    except (snowflake.connector.errors.ProgrammingError, FileNotFoundError, csv.Error) as e:
         # Gestion des erreurs
         print(f"Erreur lors de l'insertion des données CSV : {e}")
 
 def main():
     try:
-        # Connexion à la base de données
-        conn = sqlite3.connect('ma_base_de_donnees.db')
+        # Connexion à la base de données Snowflake
+        conn = snowflake.connector.connect(
+            user='<utilisateur>',
+            password='<mot_de_passe>',
+            account='<nom_compte_snowflake>',
+            warehouse='<entrepôt_snowflake>',
+            database='<base_de_donnees_snowflake>',
+            schema='<schema_snowflake>'
+        )
         cur = conn.cursor()
 
         # Insertion des données à partir des fichiers JSON
@@ -51,9 +58,9 @@ def main():
 
         # Validation des modifications et fermeture de la connexion
         conn.commit()
-    except sqlite3.Error as e:
-        # Gestion des erreurs SQLite
-        print(f"Erreur SQLite : {e}")
+    except snowflake.connector.errors.DatabaseError as e:
+        # Gestion des erreurs Snowflake
+        print(f"Erreur Snowflake : {e}")
     finally:
         # Fermeture de la connexion à la base de données
         if conn:

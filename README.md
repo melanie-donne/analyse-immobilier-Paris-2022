@@ -17,3 +17,7 @@ Le gouvernement français et la ville de Paris publient régulièrement des donn
 | 4 | Dashboard final | Création du Dashboard Power BI (ou autre) et préparation de la soutenance. | 181 - Power BI <br/><br/> 182 - Tableau <br/><br/> 185 - Looker Studio<br/> | Soutenance <br/><br/> Rapport |
 
 </div>
+
+## Rapport Etape 1 : [ICI]()
+
+## Rapport Etape 2 : [ICI]() (en cours)
