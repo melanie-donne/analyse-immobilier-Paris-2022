@@ -18,6 +18,8 @@ Le gouvernement français et la ville de Paris publient régulièrement des donn
 
 </div>
 
-## Rapport Etape 1 : [ICI]()
+## Les différents rapports du projet
 
-## Rapport Etape 2 : [ICI]() (en cours)
+### Rapport Etape 1 : [ICI](https://github.com/melanie-donne/analyse-immobilier-Paris-2022/blob/main/Rapports/Rapport_etape_1.pdf)
+
+### Rapport Etape 2 : [ICI](https://github.com/melanie-donne/analyse-immobilier-Paris-2022/blob/main/Rapports/Rapport_etape_2.pdf) (en cours)
