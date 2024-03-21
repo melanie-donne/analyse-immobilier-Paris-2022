@@ -91,7 +91,7 @@ format_data('fetching_api_data/raw_api_data/quartiers-administratifs.json',
 
 # Formatage des données pour les espaces verts et assimilés
 format_data('fetching_api_data/raw_api_data/espaces-verts-et-assimiles.json', 
-            'espaces-verts-et-assimiles.json',
+            'espaces-verts-et-assimiles-formatted.json',
             {'nsq_espace_vert': 'Identifiant',
              'nom_ev': 'Nom',
              'type_ev': 'Type',
