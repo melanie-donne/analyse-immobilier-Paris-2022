@@ -1,5 +1,6 @@
 import os
 import requests
+import pandas as pd
 
 def download_csv_from_url(url, destination):
     try:
@@ -30,7 +31,7 @@ files = [
     ("https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/plu-espaces-libres-a-vegetaliser-elv/exports/csv?lang=fr&timezone=Europe%2FBerlin&use_labels=true&delimiter=%3B", "plu_espaces_libres_a_vegetaliser_elv.csv"),
     ("https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/etablissements-scolaires-maternelles/exports/csv?lang=fr&refine=id_projet%3A%22MATERNELLES%20(ann%C3%A9e%20scolaire%202022%2F2023)%22&facet=facet(name%3D%22id_projet%22%2C%20disjunctive%3Dtrue)&timezone=Europe%2FBerlin&use_labels=true&delimiter=%3B", "etablissements-scolaires-maternelles.csv"),
     ("https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/etablissements-scolaires-ecoles-elementaires/exports/csv?lang=fr&refine=id_projet%3A%22ELEMENTAIRES%20(ann%C3%A9e%20scolaire%202022%2F2023)%22&facet=facet(name%3D%22id_projet%22%2C%20disjunctive%3Dtrue)&timezone=Europe%2FBerlin&use_labels=true&delimiter=%3B", "etablissements-scolaires-ecoles-elementaires.csv"),
-("https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/etablissements-scolaires-colleges/exports/csv?lang=fr&refine=annee_scol%3A%222022-2023%22&facet=facet(name%3D%22annee_scol%22%2C%20disjunctive%3Dtrue)&timezone=Europe%2FBerlin&use_labels=true&delimiter=%3B", "etablissements-scolaires-colleges.csv")
+    ("https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/etablissements-scolaires-colleges/exports/csv?lang=fr&refine=annee_scol%3A%222022-2023%22&facet=facet(name%3D%22annee_scol%22%2C%20disjunctive%3Dtrue)&timezone=Europe%2FBerlin&use_labels=true&delimiter=%3B", "etablissements-scolaires-colleges.csv")
 ]
 
 # Télécharger chaque fichier dans 'api_data'
