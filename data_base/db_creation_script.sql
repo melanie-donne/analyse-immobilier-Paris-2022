@@ -1,154 +1,151 @@
-CREATE TABLE arrondissements (
-    Identifiant_séquentiel INT PRIMARY KEY,
-    Numéro_arrondissement INT,
-    Numéro_arrondissement_INSEE INT,
-    Nom_arrondissement VARCHAR(255),
-    Nom_officiel_arrondissement VARCHAR(255),
+CREATE TABLE ARRONDISSEMENTS (
+    IDENTIFIANT_SEQUENTIEL INT PRIMARY KEY,
+    NUMERO_ARRONDISSEMENT INT,
+    NUMERO_ARRONDISSEMENT_INSEE INT,
+    NOM_ARRONDISSEMENT VARCHAR(255),
+    NOM_OFFICIEL_ARRONDISSEMENT VARCHAR(255),
     N_SQ_CO INT,
-    Surface DECIMAL(20, 10),
-    Périmètre DECIMAL(20, 10),
-    Geometry_X_Y VARCHAR(50),
-    Geometry GEOMETRY
+    SURFACE DECIMAL(20, 10),
+    PERIMETRE DECIMAL(20, 10),
+    GEOMETRY_X_Y VARCHAR(50),
+    GEOMETRY GEOMETRY
 );
 
-CREATE TABLE ValeursFoncieresParis2022 (
-    DateMutation DATE,
-    NatureMutation VARCHAR(255),
-    ValeurFonciere FLOAT,
-    TypeVoie VARCHAR(255),
-    CodeVoie VARCHAR(255),
-    Voie VARCHAR(255),
-    CodePostal VARCHAR(10),
-    Commune VARCHAR(255),
-    CodeDepartement VARCHAR(10),
-    CodeCommune VARCHAR(10),
-    TypeLocal VARCHAR(255),
-    SurfaceReelleBati FLOAT,
-    NombrePiecesPrincipales FLOAT,
-    SurfaceTerrain FLOAT,
-    N_SQ_CO INT,
-    FOREIGN KEY (N_SQ_CO) REFERENCES arrondissements(N_SQ_CO)
+CREATE TABLE VALEURSFONCIERESPARIS2022 (
+    DATEMUTATION DATE,
+    NATUREMUTATION VARCHAR(255),
+    VALEURFONCIERE FLOAT,
+    TYPEVOIE VARCHAR(255),
+    CODEVOIE VARCHAR(255),
+    VOIE VARCHAR(255),
+    CODEPOSTAL VARCHAR(10),
+    COMMUNE VARCHAR(255),
+    CODEDEPARTEMENT VARCHAR(10),
+    CODECOMMUNE NUMBER(10),
+    TYPELOCAL VARCHAR(255),
+    SURFACEREELLEBATI FLOAT,
+    NOMBREPIECESPRINCIPALES FLOAT,
+    SURFACETERRAIN FLOAT,
+    NUMERO_ARRONDISSEMENT INT,
+    FOREIGN KEY (NUMERO_ARRONDISSEMENT) REFERENCES ARRONDISSEMENTS(NUMERO_ARRONDISSEMENT)
 );
 
-CREATE TABLE logement_encadrement_des_loyers (
-    Année INT,
-    Secteurs_géographiques INT,
-    Numéro_du_quartier INT PRIMARY KEY,
-    Nom_du_quartier VARCHAR(50),
-    Nombre_de_pièces_principales INT,
-    Epoque_de_construction VARCHAR(20),
-    Type_de_location VARCHAR(20),
-    Loyers_de_référence DECIMAL(10,2),
-    Loyers_de_référence_majorés DECIMAL(10,2),
-    Loyers_de_référence_minorés DECIMAL(10,2),
-    Ville VARCHAR(50),
-    Numéro_INSEE_du_quartier INT,
-    geo_shape GEOMETRY,
-    geo_point_2d VARCHAR(50),
-    FOREIGN KEY (Numéro_INSEE_du_quartier) REFERENCES quartiers_administratifs(N_SQ_QU)
+CREATE TABLE LOGEMENTENCADREMENTDESLOYERS (
+    ANNEE INT,
+    SECTEURS_GEOGRAPHIQUES INT,
+    NUMERO_DU_QUARTIER INT,
+    NOM_DU_QUARTIER VARCHAR(50),
+    NOMBRE_DE_PIECES_PRINCIPALES INT,
+    EPOQUE_DE_CONSTRUCTION VARCHAR(20),
+    TYPE_DE_LOCATION VARCHAR(20),
+    LOYERS_DE_REFERENCE DECIMAL(10,2),
+    LOYERS_DE_REFERENCE_MAJORES DECIMAL(10,2),
+    LOYERS_DE_REFERENCE_MINORES DECIMAL(10,2),
+    VILLE VARCHAR(255),
+    NUMERO_INSEE_DU_QUARTIER INT,
+    GEO_SHAPE GEOMETRY,
+    GEO_POINT_2D VARCHAR(50),
+    FOREIGN KEY (NUMERO_INSEE_DU_QUARTIER) REFERENCES QUARTIERSADMINISTRATIFS(N_SQ_QU)
 );
 
-CREATE TABLE plu_espaces_libres_a_vegetaliser_elv (
-    N_SQ_CA INT PRIMARY KEY,
-    NUMEVP INT,
+CREATE TABLE PLUESPACESLIBRESAVEGETALISERELV (
+    NUMEVP INT PRIMARY KEY,
+    NUMEVP_1 INT,
     TEXTE TEXT,
-    created_user VARCHAR(50),
-    created_date DATE,
-    last_edited_user VARCHAR(50),
-    last_edited_date DATE,
-    st_area_shape DECIMAL(20,10),
-    st_perimeter_shape DECIMAL(20,10),
-    geo_shape GEOMETRY,
-    geo_point_2d VARCHAR(50),
-    FOREIGN KEY (N_SQ_CA) REFERENCES arrondissements(Identifiant_séquentiel)
+    N_PC VARCHAR(100),
+    CREATED_USER VARCHAR(100),
+    CREATED_DATE DATE,
+    LAST_EDITED_USER VARCHAR(100),
+    LAST_EDITED_DATE DATE,
+    ST_AREA_SHAPE DECIMAL(20,10),
+    ST_PERIMETER_SHAPE DECIMAL(20,10),
+    GEO_SHAPE GEOMETRY,
+    GEO_POINT_2D VARCHAR(50),
+    GEO_SHAPE_OLD GEOMETRY,
+    GEO_POINT_2D_OLD VARCHAR(50)
 );
 
-CREATE TABLE plu_espaces_verts_proteges_evp (
+CREATE TABLE PLUESPACESVERTSPROTEGESEVP (
     N_SQ_ELV INT PRIMARY KEY,
-    N_SQ_CA INT,
+    N_SQ_ELV_1 INT,
     N_SQ_PC INT,
+    CREATED_USER VARCHAR(100),
+    CREATED_DATE DATE,
+    LAST_EDITED_USER VARCHAR(100),
+    LAST_EDITED_DATE DATE,
     SHAPE_AREA DECIMAL(20,10),
     SHAPE_LEN DECIMAL(20,10),
-    C_SEC VARCHAR(50),
-    C_ASP VARCHAR(50),
-    N_PC INT,
-    created_user VARCHAR(50),
-    created_date DATE,
-    last_edited_user VARCHAR(50),
-    last_edited_date DATE,
-    geo_shape GEOMETRY,
-    geo_point_2d VARCHAR(50),
-    FOREIGN KEY (N_SQ_CA) REFERENCES arrondissements(Identifiant_séquentiel)
+    GEO_SHAPE GEOMETRY,
+    GEO_POINT_2D VARCHAR(50)
 );
 
-CREATE TABLE plu_secteurs_de_risques_delimites_par_le_ppri (
-    ZONAGE VARCHAR(50),
+CREATE TABLE PLUSECTEURSDERISQUESDELIMITESPARLEPPRI (
+    ZONAGE VARCHAR(100),
     N_SQ_PPRIZONE INT PRIMARY KEY,
-    st_area_shape DECIMAL(20,10),
-    st_perimeter_shape DECIMAL(20,10),
-    geo_shape GEOMETRY,
-    geo_point_2d VARCHAR(50)
+    ST_AREA_SHAPE DECIMAL(20,10),
+    ST_PERIMETER_SHAPE DECIMAL(20,10),
+    GEO_SHAPE GEOMETRY,
+    GEO_POINT_2D VARCHAR(50)
 );
 
-CREATE TABLE quartiers_administratifs (
+CREATE TABLE QUARTIERSADMINISTRATIFS (
     N_SQ_QU INT PRIMARY KEY,
     C_QU INT,
     C_QUINSEE INT,
-    L_QU VARCHAR(50),
+    L_QU VARCHAR(100),
     C_AR INT,
     N_SQ_AR INT,
     PERIMETRE DECIMAL(20,10),
     SURFACE DECIMAL(20,10),
-    Geometry_X_Y VARCHAR(50),
-    Geometry GEOMETRY,
-    st_area_shape DECIMAL(20,10),
-    st_perimeter_shape DECIMAL(20,10),
-    FOREIGN KEY (N_SQ_AR) REFERENCES arrondissements(Identifiant_séquentiel)
+    GEOMETRY_X_Y VARCHAR(100),
+    GEOMETRY GEOMETRY,
+    ST_AREA_SHAPE DECIMAL(20,10),
+    ST_PERIMETER_SHAPE DECIMAL(20,10)
 );
 
-CREATE TABLE etablissements_scolaires_maternelles (
-    Type_etablissement_Annee_scolaire VARCHAR(255),
-    Libelle_etablissement VARCHAR(255),
-    Adresse VARCHAR(255),
-    Arrondissement VARCHAR(255),
-    Code_INSEE INT,
-    Annee_scolaire VARCHAR(255),
-    Type_etablissement VARCHAR(255),
-    geo_shape GEOMETRY,
-    geo_point_2d VARCHAR(50),
-    FOREIGN KEY (Code_INSEE) REFERENCES arrondissements(Numéro_arrondissement_INSEE)
+CREATE TABLE ETABLISSEMENTSSCOLAIRESMATERNELLES (
+    TYPE_ETABLISSEMENT_ANNEE_SCOLAIRE VARCHAR(255),
+    LIBELLE_ETABLISSEMENT VARCHAR(255),
+    ADRESSE VARCHAR(255),
+    ARRONDISSEMENT VARCHAR(255),
+    CODE_INSEE INT,
+    ANNEE_SCOLAIRE VARCHAR(255),
+    TYPE_ETABLISSEMENT VARCHAR(255),
+    GEO_SHAPE GEOMETRY,
+    GEO_POINT_2D VARCHAR(50),
+    FOREIGN KEY (CODE_INSEE) REFERENCES ARRONDISSEMENTS(N_SQ_CO)
 );
 
-CREATE TABLE etablissements_scolaires_elementaires (
-    Type_etablissement_Annee_scolaire VARCHAR(255),
-    Libelle_etablissement VARCHAR(255 ),
-    Adresse VARCHAR(255),
-    Arrondissement VARCHAR(255),
-    Code_INSEE INT,
-    Annee_scolaire VARCHAR(255),
-    Type_etablissement VARCHAR(255),
-    created_user VARCHAR(50),
-    created_date DATE,
-    last_edited_user VARCHAR(50),
-    last_edited_date DATE,
-    geo_shape GEOMETRY,
-    geo_point_2d VARCHAR(50),
-    FOREIGN KEY (Code_INSEE) REFERENCES arrondissements(Numéro_arrondissement_INSEE)
+CREATE TABLE ETABLISSEMENTSSCOLAIRESELEMENTAIRES (
+    TYPE_ETABLISSEMENT_ANNEE_SCOLAIRE VARCHAR(255),
+    LIBELLE_ETABLISSEMENT VARCHAR(255),
+    ADRESSE VARCHAR(255),
+    ARRONDISSEMENT VARCHAR(255),
+    CODE_INSEE INT,
+    ANNEE_SCOLAIRE VARCHAR(255),
+    TYPE_ETABLISSEMENT VARCHAR(255),
+    CREATED_USER VARCHAR(100),
+    CREATED_DATE DATE,
+    LAST_EDITED_USER VARCHAR(100),
+    LAST_EDITED_DATE DATE,
+    GEO_SHAPE GEOMETRY,
+    GEO_POINT_2D VARCHAR(50),
+    FOREIGN KEY (CODE_INSEE) REFERENCES ARRONDISSEMENTS(N_SQ_CO)
 );
 
-CREATE TABLE etablissements_scolaires_colleges (
-    Type_etablissement_Annee_scolaire VARCHAR(255),
-    Libelle_etablissement VARCHAR(255),
-    Adresse VARCHAR(255),
-    Arrondissement VARCHAR(255),
-    Code_INSEE INT,
-    Annee_scolaire VARCHAR(255),
-    Type_etablissement VARCHAR(255),
-    created_user VARCHAR(50),
-    created_date DATE,
-    last_edited_user VARCHAR(50),
-    last_edited_date DATE,
-    geo_shape GEOMETRY,
-    geo_point_2d VARCHAR(50),
-    FOREIGN KEY (Code_INSEE) REFERENCES arrondissements(Numéro_arrondissement_INSEE)
+CREATE TABLE ETABLISSEMENTSSCOLAIRESCOLLEGES (
+    TYPE_ETABLISSEMENT_ANNEE_SCOLAIRE VARCHAR(255),
+    LIBELLE_ETABLISSEMENT VARCHAR(255),
+    ADRESSE VARCHAR(255),
+    ARRONDISSEMENT VARCHAR(255),
+    CODE_INSEE INT,
+    ANNEE_SCOLAIRE VARCHAR(255),
+    TYPE_ETABLISSEMENT VARCHAR(255),
+    CREATED_USER VARCHAR(100),
+    CREATED_DATE DATE,
+    LAST_EDITED_USER VARCHAR(100),
+    LAST_EDITED_DATE DATE,
+    GEO_SHAPE GEOMETRY,
+    GEO_POINT_2D VARCHAR(50),
+    FOREIGN KEY (CODE_INSEE) REFERENCES ARRONDISSEMENTS(N_SQ_CO)
 );
