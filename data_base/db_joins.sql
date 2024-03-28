@@ -1,24 +1,32 @@
--- Modification des noms de colonnes dans la table arrondissements
-ALTER TABLE arrondissements
-RENAME COLUMN N_SQ_CO TO Numero_d_arrondissement;
 
--- Modification des noms de colonnes dans la table plu_espaces_libres_a_vegetaliser_elv
-ALTER TABLE plu_espaces_libres_a_vegetaliser_elv
-RENAME COLUMN N_SQ_ELV TO Identifiant_sequentiel_du_lieu,
-RENAME COLUMN N_SQ_CA TO Identifiant_sequentiel_de_l_arrondissement;
+SELECT q.N_SQ_QU, q.L_QU, l.LOYERS_DE_REFERENCE
+FROM QUARTIERSADMINISTRATIFS q
+INNER JOIN LOGEMENTENCADREMENTDESLOYERS l ON q.N_SQ_QU = l.NUMERO_INSEE_DU_QUARTIER;
 
--- Modification des noms de colonnes dans la table plu_espaces_verts_proteges_evp
-ALTER TABLE plu_espaces_verts_proteges_evp
-RENAME COLUMN N_SQ_CA TO Identifiant_sequentiel_de_l_arrondissement;
+SELECT a.NOM_ARRONDISSEMENT, p.SHAPE_AREA
+FROM ARRONDISSEMENTS a
+INNER JOIN PLUESPACESLIBRESAVEGETALISERELV p ON a.N_SQ_CO = p.N_SQ_CA;
 
--- Modification des noms de colonnes dans la table plu_secteurs_de_risques_delimites_par_le_ppri
-ALTER TABLE plu_secteurs_de_risques_delimites_par_le_ppri
-RENAME COLUMN N_SQ_CA TO Identifiant_sequentiel_de_l_arrondissement;
+SELECT a.NOM_ARRONDISSEMENT, p.SHAPE_AREA
+FROM ARRONDISSEMENTS a
+INNER JOIN PLUESPACESVERTSPROTEGESEVP p ON a.N_SQ_CO = p.N_SQ_PC;
 
--- Modification des noms de colonnes dans la table quartiers_administratifs
-ALTER TABLE quartiers_administratifs
-RENAME COLUMN N_SQ_QU TO Identifiant_sequentiel_du_quartier,
-RENAME COLUMN C_QU TO Numero_de_quartier,
-RENAME COLUMN C_QUINSEE TO Numero_INSEE_du_quartier,
-RENAME COLUMN L_QU TO Nom_du_quartier,
-RENAME COLUMN C_AR TO Numero_d_arrondissement;
+SELECT q.N_SQ_QU, q.C_QU, q.C_QUINSEE, q.L_QU, a.NUMERO_ARRONDISSEMENT, a.NOM_ARRONDISSEMENT
+FROM QUARTIERSADMINISTRATIFS q
+INNER JOIN ARRONDISSEMENTS a ON q.N_SQ_AR = a.IDENTIFIANT_SEQUENTIEL;
+
+SELECT a.NOM_ARRONDISSEMENT, e.LIBELLE_ETABLISSEMENT
+FROM ARRONDISSEMENTS a
+INNER JOIN ETABLISSEMENTSSCOLAIRESMATERNELLES e ON a.N_SQ_CO = e.CODE_INSEE;
+
+SELECT a.NOM_ARRONDISSEMENT, e.LIBELLE_ETABLISSEMENT
+FROM ARRONDISSEMENTS a
+INNER JOIN ETABLISSEMENTSSCOLAIRESELEMENTAIRES e ON a.N_SQ_CO = e.CODE_INSEE;
+
+SELECT a.NOM_ARRONDISSEMENT, e.LIBELLE_ETABLISSEMENT
+FROM ARRONDISSEMENTS a
+INNER JOIN ETABLISSEMENTSSCOLAIRESCOLLEGES e ON a.N_SQ_CO = e.CODE_INSEE;
+
+SELECT a.NOM_ARRONDISSEMENT, v.VALEURFONCIERE
+FROM ARRONDISSEMENTS a
+INNER JOIN VALEURSFONCIERESPARIS2022 v ON a.NUMERO_ARRONDISSEMENT = v.NUMERO_ARRONDISSEMENT;
